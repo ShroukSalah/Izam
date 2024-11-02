@@ -31,8 +31,16 @@ body {
 }
 
 /* font-size */
+.f-14 {
+    font-size: 14px;
+}
+
 .f-17 {
     font-size: 17px;
+}
+
+.f-23 {
+    font-size: 23px;
 }
 
 .f-25 {
@@ -106,6 +114,112 @@ body {
     border: 1px solid #48A74C;
 }
 
+.jobCard .fav-btn {
+
+    font-size: 21px;
+    color: #C4C3C3;
+    transition: color 0.2s;
+}
+
+.jobCard .fav-btn:focus {
+    box-shadow: none;
+}
+
+.jobCard .fav-btn.active i {
+    color: #ff4081;
+}
+
+.favButton {
+    position: absolute;
+    right: 25px;
+    top: 30px;
+    border: .7px solid #C4C3C3;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.alertBlock {
+    background-color: #3D8E41;
+    border-radius: 5px;
+    padding: 20px 35px;
+    border: 1px solid #E9E9E9;
+    color: #fff;
+}
+
+.toggleSideMenu {
+    width: 57px;
+    background-color: #FFFFFF;
+    border: 1px solid #F0F0F0;
+    border-radius: 2.34px;
+    color: #6B6B6B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline-start: 10px;
+}
+
+.form-switch .form-check-input:checked {
+    background-color: #C4C3C380;
+    border-color: #C4C3C380;
+}
+
+.form-switch .form-check-input {
+
+    height: 35px;
+    width: 55px;
+    margin-inline-start: 10px;
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+    border-color: transparent
+}
+
+.form-switch .form-check-input:focus {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
+}
+
+.form-switch label {
+    font-size: 21px;
+}
+
+.page-link{
+    position: relative;
+    display: block;
+    color: #707070 ;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #C4C3C3;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    margin-inline: 6px;
+    border-radius: 4px;
+    background: transparent;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.page-link:focus,
+.page-link:hover {
+    color: #707070 !important;
+}
+.page-link:focus {
+    box-shadow: none;
+}
+
+.page-item.active a {
+    background-color: #48A74C !important;
+    border-color: #C4C3C3 !important;
+}
+
 /* media query */
 @media only screen and (max-width: 768px) {
     body {
@@ -139,5 +253,44 @@ body {
 
     .jobDescription {
         padding: 5px 20px 10px 20px;
+    }
+
+    .jobCard .fav-btn {
+        font-size: 15px;
+
+    }
+
+    .jobInfo h3 {
+        margin-bottom: 5px;
+    }
+
+    .favButton {
+        width: 35px;
+        height: 35px;
+        right: 20px;
+        top: 20px;
+    }
+
+    .alertBlock {
+        padding: 10px 15px;
+        border-radius: 2.34px;
+
+    }
+
+    .alertBlock .f-23 {
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .alertBlock .form-switch label {
+        font-size: 11px;
+    }
+
+    .alertBlock .form-switch .form-check-input {
+        height: 18px;
+        width: 36px;
+    }
+    .page-link{
+        font-size: 13px;
     }
 }
