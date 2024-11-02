@@ -379,9 +379,9 @@ ul li {
 
 .SideMenu {
     position: fixed;
-    top: 0;
+    top: auto;
     bottom: 0;
-    height: 100%;
+    height: calc(100% - 91px);
     overflow-y: auto;
     z-index: 999999;
     transition: transform 0.3s ease;
@@ -466,9 +466,120 @@ ul li {
 .edit-mode .fa-chevron-down {
     display: none !important;
 }
-.btn-lg-cancel img{
+
+.btn-lg-cancel img {
     width: 34px;
 }
+
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+    background-color: #161616;
+    padding-block: 5px;
+
+}
+
+.navbar-nav .nav-link {
+    color: #E6E6E6;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .show>.nav-link {
+    color: #fff;
+}
+
+.navbar-nav .nav-link img {
+    height: 33px;
+    margin-bottom: 5px;
+}
+
+.nav-link {
+    margin-inline: 20px;
+}
+
+.nav-link span {
+    font-size: 18px;
+    font-family: Regular;
+}
+
+.searchForm {
+    height: 58px;
+    position: relative;
+    width: 450px;
+    margin-inline: 15px;
+}
+
+.searchForm button {
+    position: absolute;
+    left: 7px;
+    top: 5px;
+    width: 48px;
+    height: 48px;
+    background: #48A74C;
+    border-radius: 50%;
+    color: #fff;
+    border: none;
+}
+
+.searchForm input {
+    border-radius: 50px;
+    background-color: #fff;
+    border: 1px solid #E9E9E9;
+    height: 100%;
+    width: 100%;
+    padding-inline-start: 70px;
+
+}
+
+.searchForm input::placeholder {
+    color: #C4C3C3;
+    font-size: 20px;
+    font-family: Regular;
+}
+
+.form-control:focus {
+    border-color: transparent;
+    outline: 0;
+    box-shadow: none;
+}
+
+.firstList li {
+    position: relative;
+}
+
+.firstList li:last-child:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 1px;
+    height: 66%;
+    background-color: #D6D6D699;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.w-max-content {
+    width: max-content;
+}
+
+.num {
+    background-image: linear-gradient(to right, #FF5E5E, #ED1F03);
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    border-radius: 50px;
+    right: 0;
+    font-size: 10px !important;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* media query */
 @media only screen and (max-width: 768px) {
     body {
@@ -482,9 +593,17 @@ ul li {
     .f-25 {
         font-size: 14px;
     }
-    .btn-lg-cancel img{
+
+    .searchForm {
         display: none;
     }
+    .SideMenu{
+        height: 100%;
+    }
+    .btn-lg-cancel img {
+        display: none;
+    }
+
     .jobCard .job-logo {
         width: 33px;
         height: 33px;

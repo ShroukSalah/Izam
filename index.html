@@ -5,11 +5,13 @@
     <!-- Meta-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Moamen">
+    <meta name="description" content="jobs">
     <meta name="keywords" content="system, izam, jobs , career">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- title -->
     <title>IZAM</title>
+    <link rel="shortcut icon" type="image/ico" href="images/fav.ico" />
+
     <!-- style links -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="fonts/fontawesome/css/all.css">
@@ -17,6 +19,77 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg  ">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" class="img-fluid logo" alt="logo">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <form class=" searchForm">
+                    <input class="form-control " type="search" placeholder="Search by name, job title, ..."
+                        aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 firstList">
+                    <li class="nav-item">
+                        <a class="nav-link text-center " href="#">
+                            <img src="images/icons/Home.svg" class="img-fluid" alt="Home">
+                            <span class="d-block">
+                                Home
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center active" href="#">
+                            <img src="images/icons/Jobs.svg" class="img-fluid" alt="Jobs">
+                            <span class="d-block">
+                                Jobs
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center  " href="#">
+                            <img src="images/icons/Employers.svg" class="img-fluid" alt="Employers">
+                            <span class="d-block">
+                                Employers
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav  mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-center  " href="#">
+                            <img src="images/icons/bell.svg" class="img-fluid" alt="Notifications">
+                            <span class="d-block">
+                                Notifications
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center  " href="#">
+                            <div class="position-relative w-max-content mx-auto">
+                                <img src="images/icons/message-square.svg" class="img-fluid" alt="Messaging">
+                                <span class="num">
+                                    1
+                                </span>
+                            </div>
+                            
+                            <span class="d-block">
+                                Messaging
+                            </span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!-- main content -->
     <div>
         <div class="container-fluid">
@@ -190,7 +263,7 @@
 
                     <!-- Cancel Button (Only shown in edit mode) -->
                     <div class="text-center pt-4 d-lg-none">
-                        <button  class="btn btn-link btn-cancel cancelButton hidden">Cancel</button>
+                        <button class="btn btn-link btn-cancel cancelButton hidden">Cancel</button>
                     </div>
                 </div>
                 <div class="col-lg-9 ps-lg-4 pe-lg-5 py-4 ms-auto">
