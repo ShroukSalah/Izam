@@ -61,4 +61,11 @@ $(document).ready(function () {
         $icon.attr('src', newSrc); // Set the new src attribute
         $(this).closest('.nav-link').toggleClass('invisible-item');
     });
+    // =====================================
+    $('#toggleSidebar').click(function () {
+        $('#sidebarModal').offcanvas('show');
+    });
+    $('#sidebarModal a').click(function () {
+        $('#sidebarModal').offcanvas('hide');
+    });
 });
