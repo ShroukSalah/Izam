@@ -21,65 +21,168 @@
     <div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-3 px-0 bg-white SideMenu hide">
-                    <div class="d-flex justify-content-between align-items-center  p-4 menu-header">
+                <div class="col-lg-3 px-0 bg-white SideMenu">
+                    <!-- Sidebar Header with Settings Icon -->
+                    <div class="d-flex justify-content-between align-items-center p-4 menu-header">
                         <div class="d-flex">
-                            <button class="btn p-0 closeMenu" >
-                                <img src="images/icons/arrow.svg" class="img-fluid me-2 d-lg-none " alt="arrow">
+                            <button class="btn p-0 closeMenu">
+                                <img src="images/icons/arrow.svg" class="img-fluid me-2 d-lg-none" alt="arrow">
                             </button>
-                            <h3 class="f-25 mb-0 ps-2">
-                                Menu
-                            </h3>
+                            <h3 class="f-25 mb-0 ps-2">Menu</h3>
                         </div>
-
-                        <button class="btn">
-                            <img src="images/icons/setting.svg" class="img-fluid settingsIcon" alt="settings">
+                        <button class="btn settingsIcon" id="toggleEditMode">
+                            <img src="images/icons/setting.svg" class="img-fluid" alt="settings">
                         </button>
                     </div>
-                    <div>
-                        <ul class="sideMenuLinks nav flex-column m-0 px-4 mt-lg-4">
-                            <li class="nav-item">
-                                <a href="" class="nav-link active">
+
+                    <!-- Sidebar Links -->
+                    <ul id="menuContainer" class="sideMenuLinks nav flex-column m-0 px-4 mt-lg-4">
+                        <li class="nav-item menu-item">
+                            <a href="#" class="nav-link item-name d-flex justify-content-between">
+                                <div>
+                                    <img src="images/icons/grip.svg" class="img-fluid icon me-2" alt="grip">
                                     Dashboard
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link collapsed" href="#submenu1" data-bs-toggle="collapse">
+                                </div>
+                                <div>
+                                    <button class="btn p-0 icon me-2">
+                                        <img src="images/icons/edit.svg" claas="img-fluid  " alt="edit">
+                                    </button>
+                                    <button class="btn p-0 toggle-visibility icon">
+                                        <img src="images/icons/eye.svg" claas="img-fluid   " alt="show">
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item menu-item">
+                            <a class="nav-link collapsed item-name d-flex justify-content-between" href="#submenu1"
+                                data-bs-toggle="collapse">
+                                <div>
+                                    <img src="images/icons/grip.svg" class="img-fluid icon me-2" alt="grip">
                                     Job application
                                     <i class="fas fa-chevron-down arrow"></i>
-                                </a>
-                                <ul class="collapse" id="submenu1">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">John Doe</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">James Bond</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link collapsed" href="#submenu2" data-bs-toggle="collapse">
+                                </div>
+                                <div>
+                                    <button class="btn p-0 icon me-2">
+                                        <img src="images/icons/edit.svg" claas="img-fluid" alt="edit">
+                                    </button>
+                                    <button class="btn p-0 toggle-visibility icon">
+                                        <img src="images/icons/eye.svg" claas="img-fluid" alt="show">
+                                    </button>
+                                </div>
+                            </a>
+
+                            <ul class="collapse" id="submenu1">
+                                <li class="nav-item menu-item">
+                                    <a class="nav-link item-name d-flex justify-content-between" href="#">
+                                        <div>
+                                            <img src="images/icons/grip.svg" class="img-fluid icon me-2" alt="grip">
+                                            John Doe
+                                        </div>
+                                        <div>
+                                            <button class="btn p-0 icon me-2">
+                                                <img src="images/icons/edit.svg" claas="img-fluid" alt="edit">
+                                            </button>
+                                            <button class="btn p-0 toggle-visibility icon">
+                                                <img src="images/icons/eye.svg" claas="img-fluid" alt="show">
+                                            </button>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item menu-item">
+                                    <a class="nav-link item-name d-flex justify-content-between" href="#">
+                                        <div>
+                                            <img src="images/icons/grip.svg" class="img-fluid icon me-2" alt="grip">
+                                            James Bond
+                                        </div>
+                                        <div>
+                                            <button class="btn p-0 icon me-2">
+                                                <img src="images/icons/edit.svg" claas="img-fluid" alt="edit">
+                                            </button>
+                                            <button class="btn p-0 toggle-visibility icon">
+                                                <img src="images/icons/eye.svg" claas="img-fluid" alt="show">
+                                            </button>
+                                        </div>
+                                    </a>
+
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item menu-item">
+                             <a class="nav-link collapsed item-name d-flex justify-content-between" href="#submenu2"
+                                data-bs-toggle="collapse">  
+                                <div>
+                                    <img src="images/icons/grip.svg" class="img-fluid icon me-2" alt="grip">
                                     Qualifications
                                     <i class="fas fa-chevron-down arrow"></i>
-                                </a>
-                                <ul class="collapse" id="submenu2">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">IT / Software development</a>
-                                    </li>
-
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-link ">
+                                </div>
+                                <div>
+                                    <button class="btn p-0 icon me-2">
+                                        <img src="images/icons/edit.svg" claas="img-fluid" alt="edit">
+                                    </button>
+                                    <button class="btn p-0 toggle-visibility icon">
+                                        <img src="images/icons/eye.svg" claas="img-fluid" alt="show">
+                                    </button>
+                                </div>
+                            </a>
+                           
+                            <ul class="collapse" id="submenu2">
+                                <li class="nav-item menu-item">
+                                    <a class="nav-link item-name d-flex justify-content-between" href="#">
+                                        <div>
+                                            <img src="images/icons/grip.svg" class="img-fluid icon me-2" alt="grip">
+                                            Database management
+                                        </div>
+                                        <div>
+                                            <button class="btn p-0 icon me-2">
+                                                <img src="images/icons/edit.svg" claas="img-fluid" alt="edit">
+                                            </button>
+                                            <button class="btn p-0 toggle-visibility icon">
+                                                <img src="images/icons/eye.svg" claas="img-fluid" alt="show">
+                                            </button>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item menu-item">
+                            <a href="#" class="nav-link item-name d-flex justify-content-between">
+                                <div>
+                                    <img src="images/icons/grip.svg" class="img-fluid icon me-2" alt="grip">
                                     About
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-link ">
+                                </div>
+                                <div>
+                                    <button class="btn p-0 icon me-2">
+                                        <img src="images/icons/edit.svg" claas="img-fluid  " alt="edit">
+                                    </button>
+                                    <button class="btn p-0 toggle-visibility icon">
+                                        <img src="images/icons/eye.svg" claas="img-fluid   " alt="show">
+                                    </button>
+                                </div>
+                            </a>
+                           
+                        </li>
+                        <li class="nav-item menu-item">
+                            <a href="#" class="nav-link item-name d-flex justify-content-between">
+                                <div>
+                                    <img src="images/icons/grip.svg" class="img-fluid icon me-2" alt="grip">
                                     Contact
-                                </a>
-                            </li>
-                        </ul>
+                                </div>
+                                <div>
+                                    <button class="btn p-0 icon me-2">
+                                        <img src="images/icons/edit.svg" claas="img-fluid  " alt="edit">
+                                    </button>
+                                    <button class="btn p-0 toggle-visibility icon">
+                                        <img src="images/icons/eye.svg" claas="img-fluid   " alt="show">
+                                    </button>
+                                </div>
+                            </a>
+                             
+                        </li>
+                    </ul>
+
+                    <!-- Cancel Button (Only shown in edit mode) -->
+                    <div class="text-center pt-4">
+                        <button id="cancelButton" class="btn btn-link btn-cancel hidden">Cancel</button>
                     </div>
                 </div>
                 <div class="col-lg-9 ps-lg-4 pe-lg-5 py-4 ms-auto">

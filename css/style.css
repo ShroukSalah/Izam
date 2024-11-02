@@ -82,6 +82,12 @@ ul li {
     list-style-type: none;
 }
 
+.btn-check:focus+.btn,
+.btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
 .jobCard {
     border-radius: 5px;
 
@@ -382,7 +388,7 @@ ul li {
     transform: translateX(0);
 }
 
-.sideMenuLinks>li.nav-item>.nav-link i {
+.sideMenuLinks>li.nav-item>.nav-link .fa-chevron-down {
     font-size: 13px;
     position: absolute;
     right: 22px;
@@ -393,11 +399,11 @@ ul li {
     align-items: center;
 }
 
-.nav-link i {
+.nav-link .fa-chevron-down {
     transform: rotate(180deg);
 }
 
-.collapsed i {
+.collapsed .fa-chevron-down {
     transform: rotate(0deg);
 }
 
@@ -419,6 +425,46 @@ ul li {
     z-index: 1000;
     position: relative;
     padding: 10px;
+}
+
+.menu-header h3 {
+    font-size: 25px;
+    margin: 0;
+}
+
+.menu-item .item-name {
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+.edit-mode .menu-item .icon {
+    display: inline-block;
+}
+
+.menu-item .icon {
+    cursor: pointer;
+    display: none;
+    /* Only show in edit mode */
+}
+
+.menu-item a {
+    text-decoration: none;
+}
+
+.invisible-item {
+    opacity: 0.4;
+}
+
+.btn-cancel {
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+.edit-mode .fa-chevron-down {
+    display: none !important;
 }
 
 /* media query */

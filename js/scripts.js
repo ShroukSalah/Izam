@@ -18,7 +18,7 @@ $(document).ready(function () {
     //    Mobile Side Menu
     const sidebar = document.querySelector('.SideMenu');
 
-    document.querySelector('.toggleSideMenu').addEventListener('click', function() {
+    document.querySelector('.toggleSideMenu').addEventListener('click', function () {
         sidebar.classList.toggle('hide');
     });
 
@@ -32,8 +32,33 @@ $(document).ready(function () {
     }
 
     // Close the sidebar when the close button is clicked
-    document.querySelector('.closeMenu').addEventListener('click', function(event) {
+    document.querySelector('.closeMenu').addEventListener('click', function (event) {
         event.preventDefault(); // Prevent the default anchor click behavior
         toggleSidebar(false); // Hide the sidebar
+    });
+    // ===================================================================
+    // Toggle edit mode
+    $('#toggleEditMode').click(function () {
+        $('#menuContainer').toggleClass('edit-mode');
+        $('#toggleEditMode img').attr('src', function () {
+            return $('#menuContainer').hasClass('edit-mode') ? 'images/icons/check-circle.svg' : 'images/icons/setting.svg';
+        });
+        $('#cancelButton').toggleClass('hidden'); // Show/Hide cancel button in edit mode
+    });
+
+    // Cancel button to exit edit mode without saving
+    $('#cancelButton').click(function () {
+        $('#menuContainer').removeClass('edit-mode');
+        $('#toggleEditMode').find('img').attr('src', 'images/icons/setting.svg');
+        $(this).addClass('hidden');
+    });
+
+    // Toggle visibility of menu items (eye icon)
+    $('.toggle-visibility').click(function (event) {
+        event.preventDefault(); // Prevent default anchor action
+        const $icon = $(this).find('img'); // Find the img inside the .toggle-visibility link
+        const newSrc = $icon.attr('src') === 'images/icons/eye.svg' ? 'images/icons/eye-slash.svg' : 'images/icons/eye.svg';
+        $icon.attr('src', newSrc); // Set the new src attribute
+        $(this).closest('.nav-link').toggleClass('invisible-item');
     });
 });
