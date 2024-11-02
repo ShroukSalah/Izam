@@ -19,15 +19,15 @@ $(document).ready(function () {
     const sidebar = document.querySelector('.SideMenu');
 
     document.querySelector('.toggleSideMenu').addEventListener('click', function () {
-        sidebar.classList.toggle('hide');
+        sidebar.classList.toggle('show');
     });
 
     // Define toggleSidebar function
     function toggleSidebar(show) {
         if (show) {
-            sidebar.classList.remove('hide');
+            sidebar.classList.add('show');
         } else {
-            sidebar.classList.add('hide');
+            sidebar.classList.remove('show');
         }
     }
 
