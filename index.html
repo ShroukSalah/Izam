@@ -30,15 +30,17 @@
                             </button>
                             <h3 class="f-25 mb-0 ps-2">Menu</h3>
                         </div>
-                        <button class="btn settingsIcon" id="toggleEditMode">
-                            <div class="text-center pt-4 d-lg-none ">
-                                <!-- <button id="cancelButton" class="btn btn-link btn-cancel hidden">
-                                    
-                                    <img src="images/icons/close.svg" class="img-fluid" alt="settings">
-                                </button> -->
-                            </div>
-                            <img src="images/icons/setting.svg" class="img-fluid" alt="settings">
-                        </button>
+                        <div class="d-flex align-items-center">
+                            <button id="cancelButton" class="btn  btn-lg-cancel cancelButton hidden">
+
+                                <img src="images/icons/close.svg" class="img-fluid" alt="settings">
+                            </button>
+                            <button class="btn settingsIcon" id="toggleEditMode">
+
+                                <img src="images/icons/setting.svg" class="img-fluid" alt="settings">
+                            </button>
+                        </div>
+
                     </div>
 
                     <!-- Sidebar Links -->
@@ -114,8 +116,8 @@
                             </ul>
                         </li>
                         <li class="nav-item menu-item">
-                             <a class="nav-link collapsed item-name d-flex justify-content-between" href="#submenu2"
-                                data-bs-toggle="collapse">  
+                            <a class="nav-link collapsed item-name d-flex justify-content-between" href="#submenu2"
+                                data-bs-toggle="collapse">
                                 <div>
                                     <img src="images/icons/grip.svg" class="img-fluid icon me-2" alt="grip">
                                     Qualifications
@@ -130,7 +132,7 @@
                                     </button>
                                 </div>
                             </a>
-                           
+
                             <ul class="collapse" id="submenu2">
                                 <li class="nav-item menu-item">
                                     <a class="nav-link item-name d-flex justify-content-between" href="#">
@@ -165,7 +167,7 @@
                                     </button>
                                 </div>
                             </a>
-                           
+
                         </li>
                         <li class="nav-item menu-item">
                             <a href="#" class="nav-link item-name d-flex justify-content-between">
@@ -182,13 +184,13 @@
                                     </button>
                                 </div>
                             </a>
-                             
+
                         </li>
                     </ul>
 
                     <!-- Cancel Button (Only shown in edit mode) -->
-                    <div class="text-center pt-4 d-lg-none ">
-                        <button id="cancelButton" class="btn btn-link btn-cancel hidden">Cancel</button>
+                    <div class="text-center pt-4 d-lg-none">
+                        <button  class="btn btn-link btn-cancel cancelButton hidden">Cancel</button>
                     </div>
                 </div>
                 <div class="col-lg-9 ps-lg-4 pe-lg-5 py-4 ms-auto">

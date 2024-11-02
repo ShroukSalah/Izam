@@ -43,14 +43,14 @@ $(document).ready(function () {
         $('#toggleEditMode img').attr('src', function () {
             return $('#menuContainer').hasClass('edit-mode') ? 'images/icons/check-circle.svg' : 'images/icons/setting.svg';
         });
-        $('#cancelButton').toggleClass('hidden'); // Show/Hide cancel button in edit mode
+        $('.cancelButton').toggleClass('hidden'); // Show/Hide cancel button in edit mode
     });
 
     // Cancel button to exit edit mode without saving
-    $('#cancelButton').click(function () {
+    $('.cancelButton').click(function () {
         $('#menuContainer').removeClass('edit-mode');
         $('#toggleEditMode').find('img').attr('src', 'images/icons/setting.svg');
-        $(this).addClass('hidden');
+        $(this).toggleClass('hidden');
     });
 
     // Toggle visibility of menu items (eye icon)
