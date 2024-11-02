@@ -15,5 +15,25 @@ $(document).ready(function () {
         $(this).parents(".select_wrap").removeClass("active");
         $(".sorting-block").removeClass("active")
     })
- 
+    //    Mobile Side Menu
+    const sidebar = document.querySelector('.SideMenu');
+
+    document.querySelector('.toggleSideMenu').addEventListener('click', function() {
+        sidebar.classList.toggle('hide');
+    });
+
+    // Define toggleSidebar function
+    function toggleSidebar(show) {
+        if (show) {
+            sidebar.classList.remove('hide');
+        } else {
+            sidebar.classList.add('hide');
+        }
+    }
+
+    // Close the sidebar when the close button is clicked
+    document.querySelector('.closeMenu').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor click behavior
+        toggleSidebar(false); // Hide the sidebar
+    });
 });
