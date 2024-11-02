@@ -377,12 +377,14 @@ ul li {
     padding: 16px 24px;
     position: relative;
 }
-
+#menuContainer .nav-item ul  .nav-link {
+    margin-inline: 0;
+}
 .SideMenu {
     position: fixed;
     top: auto;
     bottom: 0;
-    height: calc(100% - 82px);
+    height: calc(100% - 83px);
     overflow-y: auto;
     z-index: 999999;
     transition: transform 0.3s ease;
