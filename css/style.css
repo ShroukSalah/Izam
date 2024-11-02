@@ -1,0 +1,143 @@
+body {
+    font-family: Medium;
+    background-color: #f5f5f5;
+}
+
+* {
+    transition: all .3s ease-in-out;
+}
+
+@font-face {
+    font-family: Medium;
+    src: url(../fonts/DMSans_Medium.ttf);
+}
+
+@font-face {
+    font-family: Bold;
+    src: url(../fonts/DMSans_Bold.ttf);
+}
+
+@font-face {
+    font-family: Regular;
+    src: url(../fonts/DMSans_Regular.ttf);
+}
+
+.Bold {
+    font-family: Bold;
+}
+
+.Regular {
+    font-family: Regular;
+}
+
+/* font-size */
+.f-17 {
+    font-size: 17px;
+}
+
+.f-25 {
+    font-size: 25px;
+}
+
+/* colors */
+.default-color {
+    color: #14A077 !important;
+}
+
+.second-color {
+    color: #707070;
+}
+
+/*  */
+.jobCard {
+    border-radius: 5px;
+
+    border: 1px solid #F0F0F0;
+}
+
+.jobCard .job-logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.jobCard .badge {
+    background-color: #F7F7F7;
+    border-radius: 4px;
+    color: #707070;
+    font-size: 13px;
+    padding: 6px 12px;
+    margin-inline-end: 5px;
+    font-family: 'Regular';
+    margin-block: 2px;
+}
+
+.jobCard:hover .badge {
+    background-color: #FFFFFF
+}
+
+.jobInfo {
+    padding: 35px 35px 30px 35px;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.jobDescription span {
+    color: #707070;
+    font-family: Regular;
+    font-size: 16px;
+}
+
+.jobDescription {
+    padding: 15px 35px 25px 35px;
+}
+
+.jobDescription span:after {
+    content: "-";
+    color: #707070;
+    margin-inline: 10px;
+}
+
+.jobDescription span:last-child:after {
+    display: none
+}
+
+.jobCard:hover {
+    background-color: #F3FDF3 !important;
+    border: 1px solid #48A74C;
+}
+
+/* media query */
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: #faffff;
+    }
+
+    .f-17 {
+        font-size: 11px;
+    }
+
+    .f-25 {
+        font-size: 14px;
+    }
+
+    .jobCard .job-logo {
+        width: 33px;
+        height: 33px;
+    }
+
+    .jobDescription span {
+        font-size: 11px;
+    }
+
+    .jobCard .badge {
+        font-size: 9px;
+    }
+
+    .jobInfo {
+        padding: 20px 20px 15px 20px;
+    }
+
+    .jobDescription {
+        padding: 5px 20px 10px 20px;
+    }
+}
