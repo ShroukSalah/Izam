@@ -30,6 +30,27 @@ body {
     font-family: Regular;
 }
 
+/* scroll */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #F3FDF3 !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #3D8E41;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 /* font-size */
 .f-14 {
     font-size: 14px;
@@ -57,6 +78,10 @@ body {
 }
 
 /*  */
+ul li {
+    list-style-type: none;
+}
+
 .jobCard {
     border-radius: 5px;
 
@@ -332,6 +357,54 @@ body {
     border-bottom: 1px solid #E9E9E9;
 }
 
+.sideMenuLinks li {
+    margin-block: 5px;
+}
+
+.sideMenuLinks>li.nav-item>.nav-link {
+    background-color: #F7F7F7;
+
+    text-decoration: none;
+    color: #404040;
+    font-size: 22px;
+    padding: 16px 24px;
+    position: relative;
+}
+
+.SideMenu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.sideMenuLinks>li.nav-item>.nav-link i {
+    font-size: 13px;
+    position: absolute;
+    right: 22px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link i {
+    transform: rotate(180deg);
+}
+
+.collapsed i {
+    transform: rotate(0deg);
+}
+
+.nav-item ul a {
+    font-size: 19px;
+    color: #404040;
+}
+.nav-item ul a:hover{
+    color: #3D8E41;
+}
 /* media query */
 @media only screen and (max-width: 768px) {
     body {
